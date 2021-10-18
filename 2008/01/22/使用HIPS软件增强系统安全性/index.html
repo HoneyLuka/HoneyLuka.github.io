@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="什么是HIPS?(转帖于崔衍渠的Blog)了解更多关于HIPS请查看冷眼看安全的博文”主流HIPS产品深度评测” HIPS：Host Intrusion Prevent System 主机入侵防御系统。HIPS是一种能监控你电脑中文件的运行和文件运用了其他的文件以及文 件对注册表的修改，并向你报告请求允许的的软件。如果你阻止了，那么它将无法运行或者更改。比如你双击了一个病毒程序，HIPS软件跳出来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用HIPS软件增强系统安全性">
+<meta property="og:url" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/index.html">
+<meta property="og:site_name" content="花园">
+<meta property="og:description" content="什么是HIPS?(转帖于崔衍渠的Blog)了解更多关于HIPS请查看冷眼看安全的博文”主流HIPS产品深度评测” HIPS：Host Intrusion Prevent System 主机入侵防御系统。HIPS是一种能监控你电脑中文件的运行和文件运用了其他的文件以及文 件对注册表的修改，并向你报告请求允许的的软件。如果你阻止了，那么它将无法运行或者更改。比如你双击了一个病毒程序，HIPS软件跳出来">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/1.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/2.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/3.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/4.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/5.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/6.jpg">
+<meta property="og:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/7.jpg">
+<meta property="article:published_time" content="2008-01-22T05:25:53.000Z">
+<meta property="article:modified_time" content="2020-11-28T13:51:16.531Z">
+<meta property="article:author" content="Luka">
+<meta property="article:tag" content="日常">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/1.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>使用HIPS软件增强系统安全性</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Talk</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2008/02/04/%E5%B0%86%E8%A6%81%E6%9B%B4%E6%8D%A2Vista/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2008/01/19/%E6%94%BE%E5%81%87%E4%BA%86/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&text=使用HIPS软件增强系统安全性"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&is_video=false&description=使用HIPS软件增强系统安全性"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用HIPS软件增强系统安全性&body=Check out this article: https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&name=使用HIPS软件增强系统安全性&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHIPS"><span class="toc-number">1.</span> <span class="toc-text">什么是HIPS?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90HIPS%E8%BD%AF%E4%BB%B6%E2%80%94SSM-System-Safety-Monitor"><span class="toc-number">2.</span> <span class="toc-text">推荐HIPS软件—SSM(System Safety Monitor)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSM%E4%BD%BF%E7%94%A8%E8%8C%83%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">SSM使用范例</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        使用HIPS软件增强系统安全性
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">花园</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2008-01-22T05:25:53.000Z" itemprop="datePublished">2008-01-22</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="什么是HIPS"><a href="#什么是HIPS" class="headerlink" title="什么是HIPS?"></a>什么是HIPS?</h2><p>(转帖于崔衍渠的Blog)了解更多关于HIPS请查看冷眼看安全的博文”主流HIPS产品深度评测”</p>
+<p>HIPS：Host Intrusion Prevent System 主机入侵防御系统。<br>HIPS是一种能监控你电脑中文件的运行和文件运用了其他的文件以及文 件对注册表的修改，并向你报告请求允许的的软件。如果你阻止了，那么它将无法运行或者更改。比如你双击了一个病毒程序，HIPS软件跳出来报告而你阻止 了，那么病毒还是没有运行的。引用一句话：”病毒天天变种天天出新，使得杀软可能跟不上病毒的脚步，而HIPS能解决这些问题。”。<br>HIPS是以后系统 安全发展的一种趋势，只要你有足够的专业水平，你可以只用HIPS而不需杀毒软件。但是HIPS并不能称为防火墙，最多只能叫做系统防火墙，它不能阻止网 络上其他计算机对你计算机的攻击行为。<br>因为病毒天天变种天天出新，使得杀软可能跟不上病毒的脚步，而HIPS能解决这些问题</p>
+<h2 id="推荐HIPS软件—SSM-System-Safety-Monitor"><a href="#推荐HIPS软件—SSM-System-Safety-Monitor" class="headerlink" title="推荐HIPS软件—SSM(System Safety Monitor)"></a>推荐HIPS软件—SSM(System Safety Monitor)</h2><p>SSM有两个版本,商业版和免费版.个人用户使用免费版即可满足需要,有中文版本哦.</p>
+<h2 id="SSM使用范例"><a href="#SSM使用范例" class="headerlink" title="SSM使用范例"></a>SSM使用范例</h2><p>我没事的时候喜欢玩流星蝴蝶剑单机任务消磨时光.可是技术太烂,打不过去,又不甘心这么放着,所以就从网上下载了一个”无限气外挂”.</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/1.jpg" class="">
+
+<p>当时运行的时候杀毒软件提示有威胁,因为外挂正常运行了,所以我也没太在意,就这么用下去了.</p>
+<p>现在我装了SSM,现在我给大家看看这个”无限气外挂.exe”到底是怎么回事</p>
+<p>首先,双击运行”无限气外挂.exe”,SSM立即弹出如下对话框</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/2.jpg" class="">
+
+<p>SSM询问我们是否要运行”无限气外挂.exe”这个文件,我选择”允许”点击”OK”,又弹出一个对话框</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/3.jpg" class="">
+
+<p>这里可以看出”无限气外挂.exe”试图运行”OICQ.exe” 这里就可以看出这个外挂图谋不轨,这里我选择了”阻止”,接着弹出如下警告框</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/4.jpg" class="">
+
+<p>证明SSM阻止了”OICQ.exe”的运行,点击确定又弹出一对话框</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/5.jpg" class="">
+
+<p>想要监控鼠标?一个破外挂监控鼠标干什么…我选择了”阻止”,外挂功能仍旧可以正常使用..</p>
+<p>大家注意这里!!!!发起动作的程序路径是”c:\Windows\无限气\无限气外挂.exe” 刚才的”OICQ.exe”也在这个目录里.可以我明明把”无限气外挂.exe”放到了”d:\流星蝴蝶剑&quot;里,这是怎么回事呢?</p>
+<p>原来,我下载的”无限气外挂.exe”是一个”exe”后缀的压缩文件,在运行的时候将”OICQ.exe”和同名文件”无限气外挂.exe”解压到”c:\windows\无限气&quot;目录并运行这两个程序.大家想不想知道那个”OICQ.exe”有什么名堂呢???继续吧,</p>
+<p>原来”OICQ.exe”也是一个压缩文件,解压出现一个名为”iexplore.exe”的文件</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/6.jpg" class="">
+
+<p>当我运行”iexplore.exe”的时候………………</p>
+<img src="/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/7.jpg" class="">
+
+<p>PS:这时候你Y才出来…早干嘛去了..</p>
+<p>再PS:别让我点”继续运行程序”….我可不想再看看这个”iexplore.exe”究竟是什么木马程序…(水平没到那个地步…)</p>
+<p>总结:压缩文件”无限气外挂.exe”首先解压出压缩文件”OICQ.exe”和程序”无限气外挂.exe”并运行,压缩文件”OICQ.exe”释放出木马程序”iexplore.exe”并运行,”无限气外挂.exe”运行并监控鼠标(我不太清楚他为什么要监控鼠标..反正不让他监控是肯定正确的)</p>
+<p>表面看起来外挂程序运行了,其实后台还有好几步动作嘞</p>
+<p>以上就是一个使用SSM保护自己计算机的例子,我自己的例子哦.</p>
+<p>HIPS软件适合有一定计算机基础的人使用,可以达到很好的效果,几乎可以代替杀毒软件.倘若不了解的人装了乱点一气,就失去了这个软件的意义.各位自己看着办啦</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Talk</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHIPS"><span class="toc-number">1.</span> <span class="toc-text">什么是HIPS?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90HIPS%E8%BD%AF%E4%BB%B6%E2%80%94SSM-System-Safety-Monitor"><span class="toc-number">2.</span> <span class="toc-text">推荐HIPS软件—SSM(System Safety Monitor)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSM%E4%BD%BF%E7%94%A8%E8%8C%83%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">SSM使用范例</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&text=使用HIPS软件增强系统安全性"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&is_video=false&description=使用HIPS软件增强系统安全性"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用HIPS软件增强系统安全性&body=Check out this article: https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&title=使用HIPS软件增强系统安全性"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://honeyluka.github.io/2008/01/22/%E4%BD%BF%E7%94%A8HIPS%E8%BD%AF%E4%BB%B6%E5%A2%9E%E5%BC%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%80%A7/&name=使用HIPS软件增强系统安全性&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Luka
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Talk</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-143359950-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'honeyluka';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+</body>
+</html>
